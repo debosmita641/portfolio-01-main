@@ -4,6 +4,7 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Typewriter from "typewriter-effect";
 
 const page = () => {
@@ -49,10 +50,16 @@ const page = () => {
 
           <div className="mt-12 grid place-items-center lg:place-items-start">
             <Button
+              asChild
               variant={"outline"}
               className="rounded-full border-default-pink bg-transparent px-8 py-3 text-lg"
             >
-              Download CV <Download />{" "}
+              <Link
+                href={"/debosmita-ray-cv.pdf"}
+                download
+              >
+                Download CV <Download />
+              </Link>
             </Button>
           </div>
 
